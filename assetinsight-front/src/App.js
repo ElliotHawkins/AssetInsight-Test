@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -7,6 +7,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 //import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import { FormControl } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,16 +56,21 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
+      width: '50ch',
     },
   },
 }));
 
+
 export default function SearchAppBar() {
+
+  const [input, setInput] = React.useState();
   const classes = useStyles();
+  
+  const handleChange = (event) => {
+    setInput(event.target.value)
+    console.log(input)
+  }
 
   return (
     <div className={classes.root}>
@@ -80,7 +86,8 @@ export default function SearchAppBar() {
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
           </Typography>
-          <div className={classes.search}>
+          
+          <form className={classes.search} onChange={handleChange}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -89,12 +96,13 @@ export default function SearchAppBar() {
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
+              }} 
+              inputProps={{ 'aria-label': 'search' }} 
             />
-          </div>
+          </form>
         </Toolbar>
       </AppBar>
+            <h1>{input}</h1>
     </div>
   );
 }
