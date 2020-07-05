@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/main.f2ec19bd.chunk.js",
+    "main.js.map": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/main.f2ec19bd.chunk.js.map",
+    "runtime-main.js": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/runtime-main.11c6a609.js",
+    "runtime-main.js.map": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/runtime-main.11c6a609.js.map",
+    "static/js/2.2e1c16c2.chunk.js": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/2.2e1c16c2.chunk.js",
+    "static/js/2.2e1c16c2.chunk.js.map": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/2.2e1c16c2.chunk.js.map",
+    "index.html": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/index.html",
+    "precache-manifest.54a0fe207dc6412ff404ebb2a5348030.js": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/precache-manifest.54a0fe207dc6412ff404ebb2a5348030.js",
+    "service-worker.js": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.2e1c16c2.chunk.js.LICENSE.txt": "/https://github.com/ElliotHawkins/AssetInsight-Test.git/static/js/2.2e1c16c2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11c6a609.js",
+    "static/js/2.2e1c16c2.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.f2ec19bd.chunk.js"
+  ]
+}
