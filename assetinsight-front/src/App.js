@@ -97,6 +97,11 @@ export default function SearchAppBar() {
     console.log(input)
   }
 
+  const filter = home.filter(search => {
+    return search.city.indexOf(input) !== -1;
+  }); 
+
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -133,7 +138,7 @@ export default function SearchAppBar() {
       </div>
       <div>
         <TableBody>
-          {home.map((Detail, index) => {
+          {filter.map((Detail, index) => {
             return ( 
               <TableRow>
                 <TableCell className={classes.padding}>{Detail.address}</TableCell>
