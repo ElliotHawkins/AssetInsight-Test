@@ -7,7 +7,6 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 //import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import { FormControl } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,6 +58,15 @@ const useStyles = makeStyles((theme) => ({
       width: '50ch',
     },
   },
+  italic: {
+    fontStyle: 'italic',
+    color: 'grey',
+    paddingLeft: '20px'
+  },
+  searchValue:{
+    fontSize: 25,
+    paddingLeft: '25px'
+  }
 }));
 
 
@@ -102,7 +110,12 @@ export default function SearchAppBar() {
           </form>
         </Toolbar>
       </AppBar>
-            <h1>{input}</h1>
+      
+      <div>
+        <h1 className={classes.searchValue}>Searching For: <text className={classes.italic}>{input}</text></h1> 
+      </div>
+      
+            
     </div>
   );
 }
