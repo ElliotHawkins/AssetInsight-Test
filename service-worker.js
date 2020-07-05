@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/https://github.com/ElliotHawkins/AssetInsight-Test.git/precache-manifest.54a0fe207dc6412ff404ebb2a5348030.js"
+  "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/precache-manifest.5f015c1f0a7e25b045bc6ed56cb37a1f.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/https://github.com/ElliotHawkins/AssetInsight-Test.git/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/index.html"), {
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
