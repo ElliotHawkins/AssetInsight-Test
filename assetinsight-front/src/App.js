@@ -4,10 +4,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 import { fade, makeStyles } from '@material-ui/core/styles';
-//import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import Box from '@material-ui/core/Box';
+
 
 import people from './PeopleList.json';
 
@@ -70,12 +72,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 25,
     paddingLeft: '25px'
   },
-  boxStyle: {
-    padding: '50px',
-    backgroundColor:'#add8e6'
-  },
-  right: {
-    textAlign: "right"
+  table: {
+    minWidth: 850,
   }
 }));
 
@@ -125,14 +123,17 @@ export default function SearchAppBar() {
         <h1 className={classes.searchValue}>Searching For: <text className={classes.italic}>{input}</text></h1> 
       </div>
       <div>
-        {people.map((personDetail, index) => {
-          return (
-            <Box className = {classes.boxStyle}> 
-              <text>{personDetail.address}</text>
-              <text className = {classes.right}>{personDetail.name}</text>
-            </Box>
-          )
+        <TableBody>
+          {people.map((personDetail, index) => {
+            return ( 
+              <TableRow>
+                <TableCell >{personDetail.address}</TableCell>
+                <TableCell >Age: {personDetail.age}</TableCell>
+                <TableCell >{personDetail.name}</TableCell>
+              </TableRow>
+            )
         })}
+        </TableBody>
       </div>
             
     </div>
