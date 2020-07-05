@@ -102,7 +102,7 @@ export default function SearchAppBar() {
           >
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Asset Insight Tester
           </Typography>
           
           <form className={classes.search} onChange={handleChange}>
