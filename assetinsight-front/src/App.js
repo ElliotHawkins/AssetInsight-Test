@@ -80,9 +80,13 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     height: 200,
   },
-  padding: {
+  padding1: {
     fontSize: 15,
     paddingLeft: 150,
+  },
+  padding2: {
+    fontSize: 15,
+    paddingLeft: 250,
   },
 }));
 
@@ -98,7 +102,11 @@ export default function SearchAppBar() {
   }
 
   const filter = home.filter(search => {
-    return search.city.indexOf(input) !== -1;
+    if(!input){
+      return home
+    } else {
+      return search.city.toLowerCase().indexOf(input.toLowerCase()) !== -1;
+    }
   }); 
 
 
@@ -134,15 +142,16 @@ export default function SearchAppBar() {
       </AppBar>
       
       <div>
-        <h1 className={classes.searchValue}>Searching For: <text className={classes.italic}>{input}</text></h1> 
+        <h1 className={classes.searchValue}>Searching For: <text className={classes.italic}>{input}</text></h1>
+        <p className={classes.italic}>Results found: <text>{filter.length}</text></p> 
       </div>
       <div>
         <TableBody>
           {filter.map((Detail, index) => {
             return ( 
               <TableRow>
-                <TableCell className={classes.padding}>{Detail.address}</TableCell>
-                <TableCell className={classes.padding}>{Detail.price}</TableCell>
+                <TableCell className={classes.padding1}>£{Detail.price}</TableCell>
+                <TableCell className={classes.padding2}><p>{Detail.address}</p><p>{Detail.city}</p><p>{Detail.postcode}</p></TableCell>
                 <TableCell >
                   <img
                   src={Detail.picture}
