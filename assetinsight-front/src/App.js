@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState} from 'react';
+//import styles from './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -10,8 +11,7 @@ import TableCell from '@material-ui/core/TableCell';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 
-
-import home from './HouseList.json';
+import houseList from './HouseList.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,10 +63,11 @@ const useStyles = makeStyles((theme) => ({
       width: '50ch',
     },
   },
+  
   italic: {
     fontStyle: 'italic',
     color: 'grey',
-    paddingLeft: '20px'
+    paddingLeft: '30px'
   },
   searchValue:{
     fontSize: 25,
@@ -92,35 +93,27 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function SearchAppBar() {
-
   const [input, setInput] = React.useState();
+  
   const classes = useStyles();
   
-  const handleChange = (event) => {
-    setInput(event.target.value)
+  const handleChange = (e) => {
+    setInput(e.target.value)
     console.log(input)
   }
 
-  const filter = home.filter(search => {
+  const filter = houseList.filter(search => {
     if(!input){
-      return home
+      return houseList
     } else {
       return search.city.toLowerCase().indexOf(input.toLowerCase()) !== -1;
     }
   }); 
 
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Asset Insight Tester
           </Typography>
@@ -130,7 +123,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Search City…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
