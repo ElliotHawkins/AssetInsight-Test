@@ -1,8 +1,9 @@
 import React, { useEffect, useState} from 'react';
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
 //import styles from './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import TableBody from '@material-ui/core/TableBody';
@@ -13,7 +14,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import houseList from './HouseList.json';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({      //Styling used throughout the Front-End
   root: {
     flexGrow: 1,
   },
@@ -63,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
       width: '50ch',
     },
   },
-  
   italic: {
     fontStyle: 'italic',
     color: 'grey',
@@ -93,24 +93,27 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function SearchAppBar() {
-  const [input, setInput] = React.useState();
+
+  const [input, setInput] = React.useState();     //Allows the software to temperarally store the users search input 
   
   const classes = useStyles();
   
-  const handleChange = (e) => {
-    setInput(e.target.value)
+  const handleChange = (e) => {                   
+    setInput(e.target.value)                      //sets the users search input as the variable "input" to filter out houses
     console.log(input)
   }
 
-  const filter = houseList.filter(search => {
-    if(!input){
+  const filter = houseList.filter(search => {     
+    if(!input){                                   //Prevents the filter algorithm from running if there is no input
       return houseList
     } else {
       return search.city.toLowerCase().indexOf(input.toLowerCase()) !== -1;
-    }
-  }); 
+    }                                             // Returns Houses from "houseList" where the city matches their search. 
+  });                                             // Capitals do not effect this search.
 
-  return (
+  
+  
+  return (                                        
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
@@ -134,6 +137,7 @@ export default function SearchAppBar() {
         </Toolbar>
       </AppBar>
       
+
       <div>
         <h1 className={classes.searchValue}>Searching For: <text className={classes.italic}>{input}</text></h1>
         <p className={classes.italic}>Results found: <text>{filter.length}</text></p> 
@@ -157,7 +161,6 @@ export default function SearchAppBar() {
         })}
         </TableBody>
       </div>
-            
     </div>
   );
 }
