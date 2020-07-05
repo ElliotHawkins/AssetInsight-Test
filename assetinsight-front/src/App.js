@@ -11,7 +11,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 
 
-import people from './PeopleList.json';
+import home from './HouseList.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,7 +74,16 @@ const useStyles = makeStyles((theme) => ({
   },
   table: {
     minWidth: 850,
-  }
+  },
+  homeImage: {
+    paddingLeft: 400,
+    width: 300,
+    height: 200,
+  },
+  padding: {
+    fontSize: 15,
+    paddingLeft: 150,
+  },
 }));
 
 
@@ -124,12 +133,18 @@ export default function SearchAppBar() {
       </div>
       <div>
         <TableBody>
-          {people.map((personDetail, index) => {
+          {home.map((Detail, index) => {
             return ( 
               <TableRow>
-                <TableCell >{personDetail.address}</TableCell>
-                <TableCell >Age: {personDetail.age}</TableCell>
-                <TableCell >{personDetail.name}</TableCell>
+                <TableCell className={classes.padding}>{Detail.address}</TableCell>
+                <TableCell className={classes.padding}>{Detail.price}</TableCell>
+                <TableCell >
+                  <img
+                  src={Detail.picture}
+                  alt=""
+                  className = {classes.homeImage}
+                  />
+                  </TableCell>
               </TableRow>
             )
         })}
