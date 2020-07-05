@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/main.44989b33.chunk.js",
-    "main.js.map": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/main.44989b33.chunk.js.map",
-    "runtime-main.js": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/runtime-main.daa4d1e3.js",
-    "runtime-main.js.map": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/runtime-main.daa4d1e3.js.map",
-    "static/js/2.2e1c16c2.chunk.js": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/2.2e1c16c2.chunk.js",
-    "static/js/2.2e1c16c2.chunk.js.map": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/2.2e1c16c2.chunk.js.map",
-    "index.html": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/index.html",
-    "precache-manifest.5f015c1f0a7e25b045bc6ed56cb37a1f.js": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/precache-manifest.5f015c1f0a7e25b045bc6ed56cb37a1f.js",
-    "service-worker.js": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.2e1c16c2.chunk.js.LICENSE.txt": "/https://github.com/ElliotHawkins/AssetInsight-Test/assetinsight-front/static/js/2.2e1c16c2.chunk.js.LICENSE.txt"
+    "main.css": "/AssetInsight-Test/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/AssetInsight-Test/static/js/main.06e74b06.chunk.js",
+    "main.js.map": "/AssetInsight-Test/static/js/main.06e74b06.chunk.js.map",
+    "runtime-main.js": "/AssetInsight-Test/static/js/runtime-main.75bbc2ec.js",
+    "runtime-main.js.map": "/AssetInsight-Test/static/js/runtime-main.75bbc2ec.js.map",
+    "static/js/2.11986bff.chunk.js": "/AssetInsight-Test/static/js/2.11986bff.chunk.js",
+    "static/js/2.11986bff.chunk.js.map": "/AssetInsight-Test/static/js/2.11986bff.chunk.js.map",
+    "index.html": "/AssetInsight-Test/index.html",
+    "precache-manifest.a40209f494465cc513f585553c6ed55f.js": "/AssetInsight-Test/precache-manifest.a40209f494465cc513f585553c6ed55f.js",
+    "service-worker.js": "/AssetInsight-Test/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/AssetInsight-Test/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.11986bff.chunk.js.LICENSE.txt": "/AssetInsight-Test/static/js/2.11986bff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.daa4d1e3.js",
-    "static/js/2.2e1c16c2.chunk.js",
+    "static/js/runtime-main.75bbc2ec.js",
+    "static/js/2.11986bff.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.44989b33.chunk.js"
+    "static/js/main.06e74b06.chunk.js"
   ]
 }
