@@ -7,6 +7,9 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 //import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Box from '@material-ui/core/Box';
+
+import people from './PeopleList.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,6 +69,13 @@ const useStyles = makeStyles((theme) => ({
   searchValue:{
     fontSize: 25,
     paddingLeft: '25px'
+  },
+  boxStyle: {
+    padding: '50px',
+    backgroundColor:'#add8e6'
+  },
+  right: {
+    textAlign: "right"
   }
 }));
 
@@ -114,7 +124,16 @@ export default function SearchAppBar() {
       <div>
         <h1 className={classes.searchValue}>Searching For: <text className={classes.italic}>{input}</text></h1> 
       </div>
-      
+      <div>
+        {people.map((personDetail, index) => {
+          return (
+            <Box className = {classes.boxStyle}> 
+              <text>{personDetail.address}</text>
+              <text className = {classes.right}>{personDetail.name}</text>
+            </Box>
+          )
+        })}
+      </div>
             
     </div>
   );
